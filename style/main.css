@@ -49,7 +49,14 @@ header {
     width: 20%;
     padding: 50px;
     border: 1px solid white;
+}
+
+#contenitore > #game-wraper > .active {
     background-color: white;
+}
+
+#contenitore > #game-wraper > .test {
+    background-color: green;
 }
 
 
