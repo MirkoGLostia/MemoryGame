@@ -1,0 +1,1 @@
+A little project to create a memory game with only: HTML, CSS, JS
