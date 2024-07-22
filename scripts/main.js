@@ -3,7 +3,7 @@ let numbers = shuffle([1,1,2,2,3,3,4,4,5,5,6,6]);
 
 let firstChoose;
 let secondChoose;
-
+let errorCount = 0;
 let wrongAnswer = false;
 
 // funzioni
@@ -30,8 +30,12 @@ function addTestClass() {
         message.className = "card active";
         });
 
+        errorCount++
         wrongAnswer = false;
     }
+    
+    document.getElementById("errorCount").textContent = errorCount;
+
     this.className = "card test";
 
     if (!firstChoose) {
@@ -58,12 +62,13 @@ function addTestClass() {
 
 }
 
-
+// inizializza il counter degli errori
+document.getElementById("errorCount").textContent = errorCount;
 
 // costante del container
 const container = document.getElementById ("game-wraper");
 
-// ciclo per creare numeri e elementi html in cui inserirli
+// ciclo per creare la griglia di gioco
 for (let i = 0; i < 12; i++) {
 
 
@@ -71,14 +76,11 @@ for (let i = 0; i < 12; i++) {
     const quadrato = document.createElement ('div')
 
 
-    // aggiunta valore ad elemento html
     const span = quadrato.appendChild(document.createElement("span"));
     span.textContent = numbers[i];
 
     quadrato.value = numbers[i];
 
-
-    // aggiunta classe per controllo css
     quadrato.className = "card active";
 
     // aggiunta evento
