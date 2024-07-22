@@ -24,7 +24,7 @@ function shuffle(array) {
 
 function addTestClass() {
 
-    if (this.className === "card found") {
+    if (this.className === "card found" || this.className === "card test") {
         return false;
     }
 
