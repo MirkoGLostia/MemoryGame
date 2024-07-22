@@ -23,6 +23,11 @@ function shuffle(array) {
  }
 
 function addTestClass() {
+
+    if (this.className === "card found") {
+        return false;
+    }
+
     if (wrongAnswer) {
         var theChosen = document.querySelectorAll(".test");
 
@@ -50,7 +55,7 @@ function addTestClass() {
             var theChosen = document.querySelectorAll(".test");
 
             theChosen.forEach(message => {
-            message.className = "card";
+            message.className = "card found";
             });
         } else {
             wrongAnswer = true;
