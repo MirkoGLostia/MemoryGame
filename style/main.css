@@ -49,6 +49,11 @@ header {
     width: 20%;
     padding: 50px;
     border: 1px solid white;
+    z-index: 5;
+}
+
+#contenitore > #game-wraper > .card > span {
+    z-index: 2;
 }
 
 #contenitore > #game-wraper > .active {
