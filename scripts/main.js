@@ -5,13 +5,14 @@ let firstChoose;
 let secondChoose;
 let errorCount = 0;
 let wrongAnswer = false;
+let rightAnswer = 0;
 
 // funzioni
 
 function shuffle(array) {
     for (var i = array.length - 1; i > 0; i--) { 
    
-        // Generate random number 
+        // generare un numero random 
         var j = Math.floor(Math.random() * (i + 1));
                    
         var temp = array[i];
@@ -56,6 +57,14 @@ function addTestClass() {
 
             theChosen.forEach(message => {
             message.className = "card found";
+
+            rightAnswer++;
+
+            if (rightAnswer === 12) {
+                setTimeout(() => {
+                    window.alert("Hai vinto\nhai commesso: " + errorCount + " errori");
+                }, 100);
+            }
             });
         } else {
             wrongAnswer = true;
