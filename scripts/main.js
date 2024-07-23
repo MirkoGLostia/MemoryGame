@@ -1,5 +1,5 @@
 // variabili
-let numbers = shuffle([1,1,2,2,3,3,4,4,5,5,6,6]);
+let numbers = [];
 
 let firstChoose;
 let secondChoose;
@@ -75,6 +75,16 @@ function addTestClass() {
     }
 
 }
+
+// array di card
+for (let i = 1; i <= 6; i++) {
+    numbers.push(i);
+    numbers.push(i);
+    
+}
+
+// randomizziamo i numeri
+shuffle(numbers);
 
 // inizializza il counter degli errori
 document.getElementById("errorCount").textContent = errorCount;
