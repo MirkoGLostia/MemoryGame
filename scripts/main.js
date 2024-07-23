@@ -31,7 +31,7 @@ function addTestClass() {
 
     if (wrongAnswer) {
         var theChosen = document.querySelectorAll(".test");
-
+        
         theChosen.forEach(message => {
         message.className = "card active";
         });
@@ -54,18 +54,18 @@ function addTestClass() {
     if (firstChoose && secondChoose) {
         if (firstChoose === secondChoose) {
             var theChosen = document.querySelectorAll(".test");
-
+            
             theChosen.forEach(message => {
             message.className = "card found";
+            });
 
             rightAnswer++;
 
-            if (rightAnswer === 12) {
+            if (rightAnswer === 6) {
                 setTimeout(() => {
                     window.alert("Hai vinto\nhai commesso: " + errorCount + " errori");
                 }, 100);
             }
-            });
         } else {
             wrongAnswer = true;
         }
